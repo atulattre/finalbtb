@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+        }
+      </style>
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial***-scale=1.0">
+    <title>All flat details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+    
+<body>
+    <div class="container">
+        <h1>Flat details</h1>
+        <hr>
+        <table  class="table table-dark table-striped">
+            <thead>
+              <tr>
+               <!-- <th scope="col">#</th> -->
+                <th scope="col">Building name</th>
+                <th scope="col">Room no.</th>
+                <th scope="col">Room Type</th>
+                <th scope="col">Space Available</th>
+                <th scope="col">Rent</th>
+                <th scope="col">Images</th>
+                <th scope="col">Comments</th>
+                <th scope="col">     </th>
+                
+                
+                
+                
+              </tr>
+            </thead>
+            {% for flat in flats %}
+            <tbody>
+              <tr>
+                
+                <!--<th scope="row">{{flat.id}}</th>-->
+                <td>{{flat.building_name}}</td>
+                <td>{{flat.room_number}}</td>
+                <td>{{flat.room_type}}</td>
+                <td>{{flat.space}}</td>
+                <td>{{flat.rent}}</td>
+                
+                <td>
+                <img src="{{ flat.images1.url }}" alt="" class="prod-size"  width="200px">
+                </td>
+             
+                <td>{{flat.comments}}</td>
+                
+                <td><a href="{% url 'contact' flat.id %}">More details</a></td>
+                
+                
+               
+                
+              </tr>
+              
+            </tbody>
+            {% endfor %}
+          </table>
+      </div>
+     
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flat Finder</title>
+  <script>
+    function redirectToPage2() {
+        window.location.href = "cp";  // Replace with your desired URL
+    }
+    function redirectToPage1() {
+        window.location.href = "all_flat";  // Replace with your desired URL
+    }
+    
+   ;
+
+</script>
+  <style>
+    .container {
+  text-align: right;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.welcome-message {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-message">
+      Welcome <p>{{request.user}}</p>
+    </div>
+  </div>
+  
+  <div class="button-container">
+    <button class="button" onclick="redirectToPage1()">Find Flat</button>
+    <button class="button" onclick="redirectToPage2()">Post Flat Details</button>
+  </div>
+</body>
+</html>

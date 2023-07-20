@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 150px;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+    }
+    
+    .container h2 {
+      margin-bottom: 30px;
+    }
+    
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="password"],
+    .container input[type="number"],
+    .container input[type="file"],
+    .container select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    
+    .container input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    .container a {
+      text-decoration: none;
+      color: #069;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <h2>Add student details </h2>
+    <form action="\cp" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      
+      <input type="text" name="firstname" placeholder="firstname" required><br>
+      <input type="text" name="lastname" placeholder="lastname" required><br>
+      <input type="number" name="student_id" placeholder="Student ID" required><br>
+      <input type="number" name="phone" placeholder="phone" required><br>
+      <input type="text" name="branch" placeholder="Branch" required><br>
+      <input type="number" name="year" placeholder="Year" required><br>
+      <h1>Add your room details</h1>
+      <input type="text" name="building_name" placeholder="building_name" required><br>
+      <input type="text" name="room_number" placeholder="room_number" required><br>
+      <input type="text" name="room_type" placeholder="room_type" required><br>
+      <input type="number" name="space" placeholder="space" required><br>
+      <input type="text" name="rent" placeholder="rent" required><br>
+      <input type="file" name="images1"  accept="image/*"    required><br>
+     
+      <input type="text" name="comments" placeholder="Add comments" required><br>
+
+
+
+
+      
+
+      
+ 
+      
+      
+
+      
+      <input type="submit" value="Submit">
+    </form>
+    
+  </div>
+</body>
+</html>
